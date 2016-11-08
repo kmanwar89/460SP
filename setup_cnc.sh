@@ -62,7 +62,4 @@ echo "========================"
 echo     "Final information"
 echo "========================"
 echo "To open a listening TCP connection on Port 9999, issue 'nk -s -d T,9999'
-after this script finishes"
-echo ""
-echo ""
-echo "Enjoy!"
+after this script finishes. Enjoy!"
