@@ -6,36 +6,51 @@
 # Author: Kadar M. Anwar
 # Date: 11-7-2016
 
+echo "========================"
 echo "Updating the environment"
+echo "========================"
 echo ""
 echo ""
 sleep 1
+
 apt-get update && apt-get upgrade -y
-sleep 1
-echo "Cleaning up..."
+
+echo "========================"
+echo 	  "Cleaning up..."
+echo "========================"
 echo ""
 echo ""
 sleep 1
+
 apt-get autoclean && apt-get autoremove -y
 
 # Install baseline packages needed for the environment
 
-echo "Installing Wireshark...."
+echo "========================"
+echo  "Installing Wireshark..."
+echo "========================"
 echo ""
 echo ""
 sleep 1
+
 apt-get install wireshark
 
+echo "========================"
 echo "Installing gcc, git and make"
+echo "========================"
 echo ""
 echo ""
 sleep 1
+
 apt-get install gcc git make
 
-echo "Installing Netkitty"
+echo "========================"
+echo   "Installing Netkitty..."
+echo "========================"
 echo ""
 echo ""
 sleep 1
+
 cd ~
 wget http://download.savannah.gnu.org/releases/netkitty/nk-1.9.tar.gz
 tar -xzvf nk-1.9.tar.gz
@@ -43,11 +58,11 @@ cd nk-1.9
 make
 sudo make install
 
-echo ""
-echo ""
+echo "========================"
+echo     "Final information"
+echo "========================"
 echo "To open a listening TCP connection on Port 9999, issue 'nk -s -d T,9999'
 after this script finishes"
-sleep 5
 echo ""
 echo ""
 echo "Enjoy!"
