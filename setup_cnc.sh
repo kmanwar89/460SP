@@ -54,6 +54,7 @@ sleep 1
 cd ~
 wget http://download.savannah.gnu.org/releases/netkitty/nk-1.9.tar.gz
 tar -xzvf nk-1.9.tar.gz
+rm nk-1.9.tar.gz
 cd nk-1.9
 make
 sudo make install

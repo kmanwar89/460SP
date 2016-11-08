@@ -55,6 +55,7 @@ cd ~
 git clone https://github.com/picoflamingo/hacking_codes.git
 cd hacking_codes/lh_botnet
 cp bot.c ~
+rm -rf /home/$USER/hacking_codes/
 
 echo "========================"
 echo     "Final information"
