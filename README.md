@@ -9,7 +9,9 @@ ISAT 460
 Create a few VM's
 
 1) One VM to act as the CNC server
+
 2) 1-4 VM's to act as bots
+
 3) (optional) a VM to act as the client, in case you aren't running on 
 a Linux host
 
