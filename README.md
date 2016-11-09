@@ -17,3 +17,10 @@ a Linux host
 
 On each VM, make sure Git is installed, then clone this repo and execute the
 relevant scripts (bot or cnc) to setup the botnet
+
+## Alternate Setup
+
+If you don't want to/can't be bothered with installing Git on each client machine,
+then instead simply download the .zip and extract it.  The URL is:
+
+https://github.com/kmanwar89/460SP/archive/master.zip
