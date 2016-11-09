@@ -33,7 +33,7 @@ echo ""
 echo ""
 sleep 1
 
-apt-get install wireshark
+apt-get install wireshark -y
 
 echo "========================"
 echo "Installing gcc, git and make"
@@ -42,7 +42,7 @@ echo ""
 echo ""
 sleep 1
 
-apt-get install gcc git make
+apt-get install gcc git make -y
 
 echo "========================"
 echo "Downloading bot files"
