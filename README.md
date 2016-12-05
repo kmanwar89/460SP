@@ -12,10 +12,9 @@ To set up the Ares botnet, do the following:
 * Unzip the downloaded archive
 * Navigate to *Ares/server/conf* and modify the *server.conf* file.
     * Change the line *server.socket_host: '127.0.0.1'* to *server.socket_host: '0.0.0.0'*
-* Execute *python db_init.py* to create the SQLite3 database.
+* Execute *python db_init.py* in *Ares/server/* to create and initialize the SQLite3 database.
 * Finally, start the server - *python server.py*
-* Navigate to the IP address of the server VM at port 8080 to access the Ares
-command interface.  Enter a database password when prompted and login.
+* Navigate to the IP address of the server VM at port 8080 to access the Ares command interface.  Enter a database password when prompted and login.
 
 ### Client -- Metasploitable2 VM
 * Using Kali Linux, exploit a vulnerability and obtain a root shell
