@@ -17,7 +17,8 @@ sudo apt-get install git git-core python2.6 -y
 wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && sudo python2.6 get-pip.py
 
 # Install Python Requests library
-sudo pip install --upgrade pip && sudo pip install requests
+sudo pip install --upgrade pip
+sudo pip install requests
 
 # Clone the botnet repo
 cd ~ && wget https://github.com/kmanwar89/460SP/archive/master.zip --no-check-certificate
