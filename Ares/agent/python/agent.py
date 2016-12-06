@@ -13,11 +13,9 @@ from modules import runcmd
 from modules import persistence
 from modules import download
 from modules import upload
-#from modules import screenshot
-
 
 MODULES = ['runcmd', 'persistence', 'download', 'upload']
-#, 'screenshot']
+
 if not settings.BOT_ID:
     settings.BOT_ID = socket.gethostname()
 if not utils.validate_botid(settings.BOT_ID):
@@ -27,7 +25,7 @@ if not utils.validate_botid(settings.BOT_ID):
 def print_help(mod=None):
     help_text = "Loaded modules:\n"
     if mod is None:
-        for module in MODULES: 
+        for module in MODULES:
             help_text += "- " + module + "\n"
             help_text += sys.modules["modules." + module].help()
         help_text += """
