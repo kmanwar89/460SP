@@ -11,7 +11,7 @@ echo "deb http://ppa.launchpad.net/python-dev/ppa/ubuntu hardy main" >> /etc/apt
 
 # Update repository listing and install base packages
 sudo apt-get update
-sudo apt-get install git git-core python2.6
+sudo apt-get install git git-core python2.6 -y
 
 # Install pip for Python 2.6
 wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && sudo python2.6 get-pip.py
