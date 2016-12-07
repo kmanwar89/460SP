@@ -9,6 +9,9 @@ echo "deb http://old-releases.ubuntu.com/ubuntu/ hardy-updates main restricted u
 echo "deb http://old-releases.ubuntu.com/ubuntu/ hardy-security main restricted universe multiverse" >> /etc/apt/sources.list
 echo "deb http://ppa.launchpad.net/python-dev/ppa/ubuntu hardy main" >> /etc/apt/sources.list
 
+# Fix PPA GPG Error
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EED4D034D81367B9
+
 # Update repository listing and install base packages
 sudo apt-get update
 sudo apt-get install git git-core python2.6 -y
