@@ -17,7 +17,8 @@ sudo apt-get update
 sudo apt-get install git git-core python2.6 -y
 
 # Install pip for Python 2.6
-wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate && sudo python2.6 get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate
+sudo python2.6 get-pip.py
 
 # Install Python Requests library
 sudo pip install --upgrade pip
