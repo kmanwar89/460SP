@@ -28,38 +28,17 @@ pip install --upgrade pip
 pip install cherrypy
 echo ""
 
-# Get the code repository and unzip it
-echo "Downloading and setting up C&C software..."
-sleep 1
-echo ""
-echo ""
-cd ~
-wget https://github.com/sweetsoftware/Ares/archive/master.zip
-unzip master.zip
-cd Ares-master/server/conf
-echo ""
-
-# Modify the server.conf file to allow the server to operate on any IP
-sed -i "s/127.0.0.1/0.0.0.0/g" server.conf
-
 # Create & initialize the database
 echo "Initializing database..."
 sleep 1
 echo ""
 echo ""
-cd .. && python2.7 db_init.py
+cd ~/460SP/Ares/server && python2.7 db_init.py
 echo "Database created!"
 echo ""
 
-# Cleaning up
-echo "Cleaning up"
-sleep 1
-cd ~
-rm master.zip
-echo ""
-echo ""
-
-# Start the server
+# Start the server and open web interface
 echo "C&C server started at $IP:8080!"
 sleep 1
-cd ~/Ares-master/server/ &&  python2.7 server.py
+firefox 0.0.0.0:8080
+python2.7 server.py
