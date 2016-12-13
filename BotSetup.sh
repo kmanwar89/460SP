@@ -46,7 +46,6 @@ echo "Installing Python Requests library..."
 sleep 1
 echo ""
 echo ""
-sudo pip install --upgrade pip
 sudo pip install requests
 echo ""
 
