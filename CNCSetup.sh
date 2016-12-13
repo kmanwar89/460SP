@@ -38,7 +38,7 @@ echo "Database created!"
 echo ""
 
 # Start the server and open web interface
-echo "C&C server started at $IP:8080!"
+#echo "C&C server started at $IP:8080!"
 sleep 1
-firefox 0.0.0.0:8080
 python2.7 server.py
+firefox 0.0.0.0:8080
